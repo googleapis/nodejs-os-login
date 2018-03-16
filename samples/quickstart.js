@@ -24,19 +24,20 @@ if (
   );
 }
 
-const oslogin = require('@google-cloud/oslogin');
+const oslogin = require('@google-cloud/os-login');
 
 const projectId = process.env.GCLOUD_PROJECT;
 
 const client = new oslogin.OsLoginServiceClient({
-  projectId: projectId
+  projectId: projectId,
 });
 
 const request = {
-  name: 'users/1234abcd'
+  name: 'users/1234abcd',
 };
 
-client.getLoginProfile(request)
+client
+  .getLoginProfile(request)
   .then(responses => {
     const loginProfile = responses[0];
     console.log(loginProfile);
