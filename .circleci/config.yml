@@ -37,7 +37,7 @@ workflows:
               only: master
     jobs: *workflow_jobs
 jobs:
-  node4:
+  node10:
     docker:
       - image: 'node:10'
         user: node
