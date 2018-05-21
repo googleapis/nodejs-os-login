@@ -47,7 +47,7 @@ workflows:
           filters:
             branches:
               only: master
-    jobs: *master_and_releases
+    jobs: *workflow_jobs
 jobs:
   node4:
     docker:
