@@ -375,6 +375,7 @@ describe('OsLoginServiceClient', () => {
       });
     });
   });
+
 });
 
 function mockSimpleGrpcMethod(expectedRequest, response, error) {
