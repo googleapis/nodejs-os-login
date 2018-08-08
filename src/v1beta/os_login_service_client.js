@@ -103,7 +103,9 @@ class OsLoginServiceClient {
     // identifiers to uniquely identify resources within the API.
     // Create useful helper objects for these.
     this._pathTemplates = {
-      userPathTemplate: new gax.PathTemplate('users/{user}'),
+      userPathTemplate: new gax.PathTemplate(
+        'users/{user}'
+      ),
       projectPathTemplate: new gax.PathTemplate(
         'users/{user}/projects/{project}'
       ),
@@ -545,7 +547,9 @@ class OsLoginServiceClient {
    * @returns {String} - A string representing the user.
    */
   matchUserFromUserName(userName) {
-    return this._pathTemplates.userPathTemplate.match(userName).user;
+    return this._pathTemplates.userPathTemplate
+      .match(userName)
+      .user;
   }
 
   /**
@@ -556,7 +560,9 @@ class OsLoginServiceClient {
    * @returns {String} - A string representing the user.
    */
   matchUserFromProjectName(projectName) {
-    return this._pathTemplates.projectPathTemplate.match(projectName).user;
+    return this._pathTemplates.projectPathTemplate
+      .match(projectName)
+      .user;
   }
 
   /**
@@ -567,7 +573,9 @@ class OsLoginServiceClient {
    * @returns {String} - A string representing the project.
    */
   matchProjectFromProjectName(projectName) {
-    return this._pathTemplates.projectPathTemplate.match(projectName).project;
+    return this._pathTemplates.projectPathTemplate
+      .match(projectName)
+      .project;
   }
 
   /**
@@ -578,7 +586,8 @@ class OsLoginServiceClient {
    * @returns {String} - A string representing the user.
    */
   matchUserFromFingerprintName(fingerprintName) {
-    return this._pathTemplates.fingerprintPathTemplate.match(fingerprintName)
+    return this._pathTemplates.fingerprintPathTemplate
+      .match(fingerprintName)
       .user;
   }
 
@@ -590,9 +599,11 @@ class OsLoginServiceClient {
    * @returns {String} - A string representing the fingerprint.
    */
   matchFingerprintFromFingerprintName(fingerprintName) {
-    return this._pathTemplates.fingerprintPathTemplate.match(fingerprintName)
+    return this._pathTemplates.fingerprintPathTemplate
+      .match(fingerprintName)
       .fingerprint;
   }
 }
+
 
 module.exports = OsLoginServiceClient;
