@@ -142,7 +142,7 @@ class OsLoginServiceClient {
       'importSshPublicKey',
       'updateSshPublicKey',
     ];
-    for (const methodName of osLoginServiceStubMethods) {
+    for (let methodName of osLoginServiceStubMethods) {
       this._innerApiCalls[methodName] = gax.createApiCall(
         osLoginServiceStub.then(
           stub =>
