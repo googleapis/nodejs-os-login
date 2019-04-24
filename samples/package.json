@@ -5,6 +5,9 @@
   "engines": {
     "node": ">=8"
   },
+  "files": [
+    "*.js"
+  ],
   "repository": "googleapis/nodejs-os-login",
   "private": true,
   "scripts": {
