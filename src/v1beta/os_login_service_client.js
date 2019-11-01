@@ -72,7 +72,9 @@ class OsLoginServiceClient {
     const gaxModule = !global.isBrowser && opts.fallback ? gax.fallback : gax;
 
     const servicePath =
-      opts.servicePath || opts.apiEndpoint || this.constructor.servicePath;
+      opts.servicePath ||
+      opts.apiEndpoint ||
+      this.constructor.servicePath;
 
     // Ensure that options include the service address and port.
     opts = Object.assign(
@@ -113,15 +115,11 @@ class OsLoginServiceClient {
     // For Node.js, pass the path to JSON proto file.
     // For browsers, pass the JSON content.
 
-    const nodejsProtoPath = path.join(
-      __dirname,
-      '..',
-      '..',
-      'protos',
-      'protos.json'
-    );
+    const nodejsProtoPath = path.join(__dirname, '..', '..', 'protos', 'protos.json');
     const protos = gaxGrpc.loadProto(
-      opts.fallback ? require('../../protos/protos.json') : nodejsProtoPath
+      opts.fallback ?
+        require("../../protos/protos.json") :
+        nodejsProtoPath
     );
 
     // This API contains "path templates"; forward-slash-separated
@@ -134,7 +132,9 @@ class OsLoginServiceClient {
       projectPathTemplate: new gaxModule.PathTemplate(
         'users/{user}/projects/{project}'
       ),
-      userPathTemplate: new gaxModule.PathTemplate('users/{user}'),
+      userPathTemplate: new gaxModule.PathTemplate(
+        'users/{user}'
+      ),
     };
 
     // Put together the default options sent with requests.
@@ -153,9 +153,9 @@ class OsLoginServiceClient {
     // Put together the "service stub" for
     // google.cloud.oslogin.v1beta.OsLoginService.
     const osLoginServiceStub = gaxGrpc.createStub(
-      opts.fallback
-        ? protos.lookupService('google.cloud.oslogin.v1beta.OsLoginService')
-        : protos.google.cloud.oslogin.v1beta.OsLoginService,
+      opts.fallback ?
+        protos.lookupService('google.cloud.oslogin.v1beta.OsLoginService') :
+        protos.google.cloud.oslogin.v1beta.OsLoginService,
       opts
     );
 
@@ -273,11 +273,10 @@ class OsLoginServiceClient {
     options = options || {};
     options.otherArgs = options.otherArgs || {};
     options.otherArgs.headers = options.otherArgs.headers || {};
-    options.otherArgs.headers[
-      'x-goog-request-params'
-    ] = gax.routingHeader.fromParams({
-      name: request.name,
-    });
+    options.otherArgs.headers['x-goog-request-params'] =
+      gax.routingHeader.fromParams({
+        'name': request.name
+      });
 
     return this._innerApiCalls.deletePosixAccount(request, options, callback);
   }
@@ -321,11 +320,10 @@ class OsLoginServiceClient {
     options = options || {};
     options.otherArgs = options.otherArgs || {};
     options.otherArgs.headers = options.otherArgs.headers || {};
-    options.otherArgs.headers[
-      'x-goog-request-params'
-    ] = gax.routingHeader.fromParams({
-      name: request.name,
-    });
+    options.otherArgs.headers['x-goog-request-params'] =
+      gax.routingHeader.fromParams({
+        'name': request.name
+      });
 
     return this._innerApiCalls.deleteSshPublicKey(request, options, callback);
   }
@@ -380,11 +378,10 @@ class OsLoginServiceClient {
     options = options || {};
     options.otherArgs = options.otherArgs || {};
     options.otherArgs.headers = options.otherArgs.headers || {};
-    options.otherArgs.headers[
-      'x-goog-request-params'
-    ] = gax.routingHeader.fromParams({
-      name: request.name,
-    });
+    options.otherArgs.headers['x-goog-request-params'] =
+      gax.routingHeader.fromParams({
+        'name': request.name
+      });
 
     return this._innerApiCalls.getLoginProfile(request, options, callback);
   }
@@ -436,11 +433,10 @@ class OsLoginServiceClient {
     options = options || {};
     options.otherArgs = options.otherArgs || {};
     options.otherArgs.headers = options.otherArgs.headers || {};
-    options.otherArgs.headers[
-      'x-goog-request-params'
-    ] = gax.routingHeader.fromParams({
-      name: request.name,
-    });
+    options.otherArgs.headers['x-goog-request-params'] =
+      gax.routingHeader.fromParams({
+        'name': request.name
+      });
 
     return this._innerApiCalls.getSshPublicKey(request, options, callback);
   }
@@ -503,11 +499,10 @@ class OsLoginServiceClient {
     options = options || {};
     options.otherArgs = options.otherArgs || {};
     options.otherArgs.headers = options.otherArgs.headers || {};
-    options.otherArgs.headers[
-      'x-goog-request-params'
-    ] = gax.routingHeader.fromParams({
-      parent: request.parent,
-    });
+    options.otherArgs.headers['x-goog-request-params'] =
+      gax.routingHeader.fromParams({
+        'parent': request.parent
+      });
 
     return this._innerApiCalls.importSshPublicKey(request, options, callback);
   }
@@ -573,11 +568,10 @@ class OsLoginServiceClient {
     options = options || {};
     options.otherArgs = options.otherArgs || {};
     options.otherArgs.headers = options.otherArgs.headers || {};
-    options.otherArgs.headers[
-      'x-goog-request-params'
-    ] = gax.routingHeader.fromParams({
-      name: request.name,
-    });
+    options.otherArgs.headers['x-goog-request-params'] =
+      gax.routingHeader.fromParams({
+        'name': request.name
+      });
 
     return this._innerApiCalls.updateSshPublicKey(request, options, callback);
   }
@@ -634,7 +628,8 @@ class OsLoginServiceClient {
    * @returns {String} - A string representing the user.
    */
   matchUserFromFingerprintName(fingerprintName) {
-    return this._pathTemplates.fingerprintPathTemplate.match(fingerprintName)
+    return this._pathTemplates.fingerprintPathTemplate
+      .match(fingerprintName)
       .user;
   }
 
@@ -646,7 +641,8 @@ class OsLoginServiceClient {
    * @returns {String} - A string representing the fingerprint.
    */
   matchFingerprintFromFingerprintName(fingerprintName) {
-    return this._pathTemplates.fingerprintPathTemplate.match(fingerprintName)
+    return this._pathTemplates.fingerprintPathTemplate
+      .match(fingerprintName)
       .fingerprint;
   }
 
@@ -658,7 +654,9 @@ class OsLoginServiceClient {
    * @returns {String} - A string representing the user.
    */
   matchUserFromProjectName(projectName) {
-    return this._pathTemplates.projectPathTemplate.match(projectName).user;
+    return this._pathTemplates.projectPathTemplate
+      .match(projectName)
+      .user;
   }
 
   /**
@@ -669,7 +667,9 @@ class OsLoginServiceClient {
    * @returns {String} - A string representing the project.
    */
   matchProjectFromProjectName(projectName) {
-    return this._pathTemplates.projectPathTemplate.match(projectName).project;
+    return this._pathTemplates.projectPathTemplate
+      .match(projectName)
+      .project;
   }
 
   /**
@@ -680,8 +680,11 @@ class OsLoginServiceClient {
    * @returns {String} - A string representing the user.
    */
   matchUserFromUserName(userName) {
-    return this._pathTemplates.userPathTemplate.match(userName).user;
+    return this._pathTemplates.userPathTemplate
+      .match(userName)
+      .user;
   }
 }
+
 
 module.exports = OsLoginServiceClient;

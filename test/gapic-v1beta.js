@@ -45,9 +45,7 @@ describe('OsLoginServiceClient', () => {
   });
 
   it('should create a client with gRPC fallback', () => {
-    const client = new osLoginModule.v1beta.OsLoginServiceClient({
-      fallback: true,
-    });
+    const client = new osLoginModule.v1beta.OsLoginServiceClient({fallback: true});
     assert(client);
   });
 
@@ -405,6 +403,7 @@ describe('OsLoginServiceClient', () => {
       });
     });
   });
+
 });
 
 function mockSimpleGrpcMethod(expectedRequest, response, error) {
