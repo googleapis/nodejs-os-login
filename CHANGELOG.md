@@ -4,6 +4,13 @@
 
 [1]: https://www.npmjs.com/package/@google-cloud/os-login?activeTab=versions
 
+### [1.3.3](https://www.github.com/googleapis/nodejs-os-login/compare/v1.3.2...v1.3.3) (2019-12-26)
+
+
+### Bug Fixes
+
+* **deps:** pin TypeScript below 3.7.0 ([1231063](https://www.github.com/googleapis/nodejs-os-login/commit/1231063de822c3fbed554aea3e426fa0eacea743))
+
 ### [1.3.2](https://www.github.com/googleapis/nodejs-os-login/compare/v1.3.1...v1.3.2) (2019-11-15)
 
 
