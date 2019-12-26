@@ -304,6 +304,7 @@
     },
     {
       "path": "src/v1beta/os_login_service_client.ts"
+
     }
   ]
 }
