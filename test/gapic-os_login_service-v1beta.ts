@@ -16,9 +16,12 @@
 // ** https://github.com/googleapis/gapic-generator-typescript **
 // ** All changes to this file may be overwritten. **
 
-import * as protosTypes from '../protos/protos';
-import * as assert from 'assert';
-const osloginserviceModule = require('../src');
+'use strict';
+
+const assert = require('assert');
+const {describe, it} = require('mocha');
+
+const osLoginModule = require('../src');
 
 const FAKE_STATUS_CODE = 1;
 class FakeError {
