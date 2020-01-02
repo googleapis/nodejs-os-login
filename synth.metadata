@@ -1,12 +1,12 @@
 {
-  "updateTime": "2019-12-25T23:20:09.890011Z",
+  "updateTime": "2020-01-02T23:47:09.141043Z",
   "sources": [
     {
       "git": {
         "name": "googleapis",
         "remote": "https://github.com/googleapis/googleapis.git",
-        "sha": "46e52fd64973e815cae61e78b14608fe7aa7b1df",
-        "internalRef": "286958627"
+        "sha": "ec285d3d230810147ebbf8d5b691ee90320c6d2d",
+        "internalRef": "287608953"
       }
     },
     {
@@ -85,9 +85,6 @@
     },
     {
       "path": "test/gapic-os_login_service-v1beta.ts"
-    },
-    {
-      "path": "system-test/.eslintrc.yml"
     },
     {
       "path": "system-test/install.ts"
@@ -304,7 +301,6 @@
     },
     {
       "path": "src/v1beta/os_login_service_client.ts"
-
     }
   ]
 }

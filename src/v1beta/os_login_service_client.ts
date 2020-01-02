@@ -190,6 +190,9 @@ export class OsLoginServiceClient {
     for (const methodName of osLoginServiceStubMethods) {
       const innerCallPromise = this.osLoginServiceStub.then(
         stub => (...args: Array<{}>) => {
+          if (this._terminated) {
+            return Promise.reject('The client has already been closed.');
+          }
           return stub[methodName].apply(stub, args);
         },
         (err: Error | null | undefined) => () => {
@@ -210,9 +213,6 @@ export class OsLoginServiceClient {
         callOptions?: CallOptions,
         callback?: APICallback
       ) => {
-        if (this._terminated) {
-          return Promise.reject('The client has already been closed.');
-        }
         return apiCall(argument, callOptions, callback);
       };
     }
@@ -789,7 +789,7 @@ export class OsLoginServiceClient {
    * @param {string} project
    * @returns {string} Resource name string.
    */
-  posixaccountPath(user: string, project: string) {
+  posixAccountPath(user: string, project: string) {
     return this._pathTemplates.posixaccountPathTemplate.render({
       user,
       project,
@@ -827,7 +827,7 @@ export class OsLoginServiceClient {
    * @param {string} fingerprint
    * @returns {string} Resource name string.
    */
-  sshpublickeyPath(user: string, fingerprint: string) {
+  sshPublicKeyPath(user: string, fingerprint: string) {
     return this._pathTemplates.sshpublickeyPathTemplate.render({
       user,
       fingerprint,
