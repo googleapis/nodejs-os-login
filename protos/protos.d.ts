@@ -43,10 +43,10 @@ export namespace google {
                     username?: (string|null);
 
                     /** PosixAccount uid */
-                    uid?: (number|Long|string|null);
+                    uid?: (number|Long|null);
 
                     /** PosixAccount gid */
-                    gid?: (number|Long|string|null);
+                    gid?: (number|Long|null);
 
                     /** PosixAccount homeDirectory */
                     homeDirectory?: (string|null);
@@ -64,7 +64,7 @@ export namespace google {
                     accountId?: (string|null);
 
                     /** PosixAccount operatingSystemType */
-                    operatingSystemType?: (google.cloud.oslogin.common.OperatingSystemType|keyof typeof google.cloud.oslogin.common.OperatingSystemType|null);
+                    operatingSystemType?: (google.cloud.oslogin.common.OperatingSystemType|null);
 
                     /** PosixAccount name */
                     name?: (string|null);
@@ -86,10 +86,10 @@ export namespace google {
                     public username: string;
 
                     /** PosixAccount uid. */
-                    public uid: (number|Long|string);
+                    public uid: (number|Long);
 
                     /** PosixAccount gid. */
-                    public gid: (number|Long|string);
+                    public gid: (number|Long);
 
                     /** PosixAccount homeDirectory. */
                     public homeDirectory: string;
@@ -107,7 +107,7 @@ export namespace google {
                     public accountId: string;
 
                     /** PosixAccount operatingSystemType. */
-                    public operatingSystemType: (google.cloud.oslogin.common.OperatingSystemType|keyof typeof google.cloud.oslogin.common.OperatingSystemType);
+                    public operatingSystemType: google.cloud.oslogin.common.OperatingSystemType;
 
                     /** PosixAccount name. */
                     public name: string;
@@ -190,7 +190,7 @@ export namespace google {
                     key?: (string|null);
 
                     /** SshPublicKey expirationTimeUsec */
-                    expirationTimeUsec?: (number|Long|string|null);
+                    expirationTimeUsec?: (number|Long|null);
 
                     /** SshPublicKey fingerprint */
                     fingerprint?: (string|null);
@@ -212,7 +212,7 @@ export namespace google {
                     public key: string;
 
                     /** SshPublicKey expirationTimeUsec. */
-                    public expirationTimeUsec: (number|Long|string);
+                    public expirationTimeUsec: (number|Long);
 
                     /** SshPublicKey fingerprint. */
                     public fingerprint: string;
@@ -1242,7 +1242,7 @@ export namespace google {
             nameField?: (string|null);
 
             /** ResourceDescriptor history */
-            history?: (google.api.ResourceDescriptor.History|keyof typeof google.api.ResourceDescriptor.History|null);
+            history?: (google.api.ResourceDescriptor.History|null);
 
             /** ResourceDescriptor plural */
             plural?: (string|null);
@@ -1270,7 +1270,7 @@ export namespace google {
             public nameField: string;
 
             /** ResourceDescriptor history. */
-            public history: (google.api.ResourceDescriptor.History|keyof typeof google.api.ResourceDescriptor.History);
+            public history: google.api.ResourceDescriptor.History;
 
             /** ResourceDescriptor plural. */
             public plural: string;
@@ -2489,10 +2489,10 @@ export namespace google {
             number?: (number|null);
 
             /** FieldDescriptorProto label */
-            label?: (google.protobuf.FieldDescriptorProto.Label|keyof typeof google.protobuf.FieldDescriptorProto.Label|null);
+            label?: (google.protobuf.FieldDescriptorProto.Label|null);
 
             /** FieldDescriptorProto type */
-            type?: (google.protobuf.FieldDescriptorProto.Type|keyof typeof google.protobuf.FieldDescriptorProto.Type|null);
+            type?: (google.protobuf.FieldDescriptorProto.Type|null);
 
             /** FieldDescriptorProto typeName */
             typeName?: (string|null);
@@ -2529,10 +2529,10 @@ export namespace google {
             public number: number;
 
             /** FieldDescriptorProto label. */
-            public label: (google.protobuf.FieldDescriptorProto.Label|keyof typeof google.protobuf.FieldDescriptorProto.Label);
+            public label: google.protobuf.FieldDescriptorProto.Label;
 
             /** FieldDescriptorProto type. */
-            public type: (google.protobuf.FieldDescriptorProto.Type|keyof typeof google.protobuf.FieldDescriptorProto.Type);
+            public type: google.protobuf.FieldDescriptorProto.Type;
 
             /** FieldDescriptorProto typeName. */
             public typeName: string;
@@ -3307,7 +3307,7 @@ export namespace google {
             javaStringCheckUtf8?: (boolean|null);
 
             /** FileOptions optimizeFor */
-            optimizeFor?: (google.protobuf.FileOptions.OptimizeMode|keyof typeof google.protobuf.FileOptions.OptimizeMode|null);
+            optimizeFor?: (google.protobuf.FileOptions.OptimizeMode|null);
 
             /** FileOptions goPackage */
             goPackage?: (string|null);
@@ -3383,7 +3383,7 @@ export namespace google {
             public javaStringCheckUtf8: boolean;
 
             /** FileOptions optimizeFor. */
-            public optimizeFor: (google.protobuf.FileOptions.OptimizeMode|keyof typeof google.protobuf.FileOptions.OptimizeMode);
+            public optimizeFor: google.protobuf.FileOptions.OptimizeMode;
 
             /** FileOptions goPackage. */
             public goPackage: string;
@@ -3632,13 +3632,13 @@ export namespace google {
         interface IFieldOptions {
 
             /** FieldOptions ctype */
-            ctype?: (google.protobuf.FieldOptions.CType|keyof typeof google.protobuf.FieldOptions.CType|null);
+            ctype?: (google.protobuf.FieldOptions.CType|null);
 
             /** FieldOptions packed */
             packed?: (boolean|null);
 
             /** FieldOptions jstype */
-            jstype?: (google.protobuf.FieldOptions.JSType|keyof typeof google.protobuf.FieldOptions.JSType|null);
+            jstype?: (google.protobuf.FieldOptions.JSType|null);
 
             /** FieldOptions lazy */
             lazy?: (boolean|null);
@@ -3669,13 +3669,13 @@ export namespace google {
             constructor(properties?: google.protobuf.IFieldOptions);
 
             /** FieldOptions ctype. */
-            public ctype: (google.protobuf.FieldOptions.CType|keyof typeof google.protobuf.FieldOptions.CType);
+            public ctype: google.protobuf.FieldOptions.CType;
 
             /** FieldOptions packed. */
             public packed: boolean;
 
             /** FieldOptions jstype. */
-            public jstype: (google.protobuf.FieldOptions.JSType|keyof typeof google.protobuf.FieldOptions.JSType);
+            public jstype: google.protobuf.FieldOptions.JSType;
 
             /** FieldOptions lazy. */
             public lazy: boolean;
@@ -4174,7 +4174,7 @@ export namespace google {
             deprecated?: (boolean|null);
 
             /** MethodOptions idempotencyLevel */
-            idempotencyLevel?: (google.protobuf.MethodOptions.IdempotencyLevel|keyof typeof google.protobuf.MethodOptions.IdempotencyLevel|null);
+            idempotencyLevel?: (google.protobuf.MethodOptions.IdempotencyLevel|null);
 
             /** MethodOptions uninterpretedOption */
             uninterpretedOption?: (google.protobuf.IUninterpretedOption[]|null);
@@ -4199,7 +4199,7 @@ export namespace google {
             public deprecated: boolean;
 
             /** MethodOptions idempotencyLevel. */
-            public idempotencyLevel: (google.protobuf.MethodOptions.IdempotencyLevel|keyof typeof google.protobuf.MethodOptions.IdempotencyLevel);
+            public idempotencyLevel: google.protobuf.MethodOptions.IdempotencyLevel;
 
             /** MethodOptions uninterpretedOption. */
             public uninterpretedOption: google.protobuf.IUninterpretedOption[];
@@ -4295,16 +4295,16 @@ export namespace google {
             identifierValue?: (string|null);
 
             /** UninterpretedOption positiveIntValue */
-            positiveIntValue?: (number|Long|string|null);
+            positiveIntValue?: (number|Long|null);
 
             /** UninterpretedOption negativeIntValue */
-            negativeIntValue?: (number|Long|string|null);
+            negativeIntValue?: (number|Long|null);
 
             /** UninterpretedOption doubleValue */
             doubleValue?: (number|null);
 
             /** UninterpretedOption stringValue */
-            stringValue?: (Uint8Array|string|null);
+            stringValue?: (Uint8Array|null);
 
             /** UninterpretedOption aggregateValue */
             aggregateValue?: (string|null);
@@ -4326,16 +4326,16 @@ export namespace google {
             public identifierValue: string;
 
             /** UninterpretedOption positiveIntValue. */
-            public positiveIntValue: (number|Long|string);
+            public positiveIntValue: (number|Long);
 
             /** UninterpretedOption negativeIntValue. */
-            public negativeIntValue: (number|Long|string);
+            public negativeIntValue: (number|Long);
 
             /** UninterpretedOption doubleValue. */
             public doubleValue: number;
 
             /** UninterpretedOption stringValue. */
-            public stringValue: (Uint8Array|string);
+            public stringValue: Uint8Array;
 
             /** UninterpretedOption aggregateValue. */
             public aggregateValue: string;
