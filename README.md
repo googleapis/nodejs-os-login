@@ -55,18 +55,18 @@ npm install @google-cloud/os-login
 ### Using the client library
 
 ```javascript
-  const {OsLoginServiceClient} = require('@google-cloud/os-login');
-  const client = new OsLoginServiceClient();
+const {OsLoginServiceClient} = require('@google-cloud/os-login');
+const client = new OsLoginServiceClient();
 
-  async function quickstart() {
-    const [loginProfile] = await client.getLoginProfile({
-      name: 'users/beckwith@google.com',
-    });
-    console.log('Login Profile:');
-    console.log(loginProfile);
-  }
+async function quickstart() {
+  const [loginProfile] = await client.getLoginProfile({
+    name: 'users/beckwith@google.com',
+  });
+  console.log('Login Profile:');
+  console.log(loginProfile);
+}
 
-  quickstart();
+quickstart();
 
 ```
 
@@ -109,11 +109,13 @@ More Information: [Google Cloud Platform Launch Stages][launch_stages]
 
 Contributions welcome! See the [Contributing Guide](https://github.com/googleapis/nodejs-os-login/blob/master/CONTRIBUTING.md).
 
-Please note that this `README.md`, the `samples/README.md`,
+Please note that this [README.md](README.md), the [samples/README.md](samples/README.md),
 and a variety of configuration files in this repository (including `.nycrc` and `tsconfig.json`)
-are generated from a central template. To edit one of these files, make an edit
-to its template in this
-[directory](https://github.com/googleapis/synthtool/tree/master/synthtool/gcp/templates/node_library).
+are generated from a central template.
+
+If you would like to make edits to one of those files
+(or if you aren't certain if the file you're changing is one, check in the template repository before making changes),
+look for the file in the [template](https://github.com/googleapis/synthtool/tree/master/synthtool/gcp/templates/node_library).
 
 ## License
 
