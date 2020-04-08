@@ -1,12 +1,13 @@
 {
-  "updateTime": "2020-04-08T12:09:31.286164Z",
+  "updateTime": "2020-04-08T12:11:34.712885Z",
   "sources": [
     {
       "git": {
         "name": "googleapis",
         "remote": "https://github.com/googleapis/googleapis.git",
-        "sha": "3d5d228a58bdf875e6147b228db3159010c735ee",
-        "internalRef": "304500143"
+        "sha": "1b969c28a6579265e89cd35e6c2ecacc89970e2d",
+        "internalRef": "304620317",
+        "log": "1b969c28a6579265e89cd35e6c2ecacc89970e2d\nchore: set Ruby namespace in proto options\n\nPiperOrigin-RevId: 304620317\n\n5378173a889f9c7d83e36e52d38a6267190de692\nAdd v1beta2 SubmitJobAsOperation RPC to Dataproc.\n\nPiperOrigin-RevId: 304594381\n\n"
       }
     },
     {
