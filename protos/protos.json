@@ -13,6 +13,7 @@
                     "java_outer_classname": "OsLoginProto",
                     "java_package": "com.google.cloud.oslogin.common",
                     "php_namespace": "Google\\Cloud\\OsLogin\\Common",
+                    "ruby_package": "Google::Cloud::OsLogin::Common",
                     "(google.api.resource_definition).type": "oslogin.googleapis.com/User",
                     "(google.api.resource_definition).pattern": "users/{user}"
                   },
