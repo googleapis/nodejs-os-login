@@ -121,7 +121,8 @@
                     "java_multiple_files": true,
                     "java_outer_classname": "OsLoginProto",
                     "java_package": "com.google.cloud.oslogin.v1",
-                    "php_namespace": "Google\\Cloud\\OsLogin\\V1"
+                    "php_namespace": "Google\\Cloud\\OsLogin\\V1",
+                    "ruby_package": "Google::Cloud::OsLogin::V1"
                   },
                   "nested": {
                     "OsLoginService": {
@@ -322,7 +323,8 @@
                     "java_multiple_files": true,
                     "java_outer_classname": "OsLoginProto",
                     "java_package": "com.google.cloud.oslogin.v1beta",
-                    "php_namespace": "Google\\Cloud\\OsLogin\\V1beta"
+                    "php_namespace": "Google\\Cloud\\OsLogin\\V1beta",
+                    "ruby_package": "Google::Cloud::OsLogin::V1beta"
                   },
                   "nested": {
                     "OsLoginService": {
