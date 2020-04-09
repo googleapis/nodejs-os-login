@@ -1,6 +1,13 @@
 {
-  "updateTime": "2020-04-03T11:58:20.765950Z",
+  "updateTime": "2020-04-09T12:22:47.246684Z",
   "sources": [
+    {
+      "git": {
+        "name": ".",
+        "remote": "https://github.com/googleapis/nodejs-os-login.git",
+        "sha": "aa2131b5f7d398468294cca65f427a2e15182c3f"
+      }
+    },
     {
       "git": {
         "name": "googleapis",
