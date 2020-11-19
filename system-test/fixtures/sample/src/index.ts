@@ -18,15 +18,8 @@
 
 import {OsLoginServiceClient} from '@google-cloud/os-login';
 
-// check that the client class type name can be used
-function doStuffWithOsLoginServiceClient(client: OsLoginServiceClient) {
-  client.close();
-}
-
 function main() {
-  // check that the client instance can be created
-  const osLoginServiceClient = new OsLoginServiceClient();
-  doStuffWithOsLoginServiceClient(osLoginServiceClient);
+  new OsLoginServiceClient();
 }
 
 main();
