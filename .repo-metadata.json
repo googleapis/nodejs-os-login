@@ -12,5 +12,5 @@
   "name": "oslogin",
   "issue_tracker": "https://issuetracker.google.com/savedsearches/559755",
   "api_shortname": "oslogin",
-  "library_type": ""
+  "library_type": "GAPIC_AUTO"
 }
