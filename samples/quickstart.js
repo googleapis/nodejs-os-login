@@ -21,7 +21,7 @@
 'use strict';
 
 function main(name) {
-  // [START oslogin_v1_generated_OsLoginService_GetLoginProfile_async]
+  // [START oslogin_quickstart]
   /**
    * This snippet has been automatically generated and should be regarded as a code template only.
    * It will require modifications to work.
@@ -59,7 +59,7 @@ function main(name) {
   }
 
   callGetLoginProfile();
-  // [END oslogin_v1_generated_OsLoginService_GetLoginProfile_async]
+  // [END oslogin_quickstart]
 }
 
 process.on('unhandledRejection', err => {
