@@ -22,7 +22,9 @@ const exec = cmd => execSync(cmd, {encoding: 'utf8'});
 
 describe('sample tests', () => {
   it('should run the quickstart', () => {
-    const output = exec('node quickstart users/notreal@google.com');
+    const output = exec(
+      'node quickstart kokoro-system-test@long-door-651.iam.gserviceaccount.com'
+    );
     console.log(output);
   });
 });
